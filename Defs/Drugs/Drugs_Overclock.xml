@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>KEP_Overclock</defName>
+    <label>overclock</label>
+    <description>A drug that overclocks the user's cognitive and manipulative functions, hence the name. Meanwhile, the user is depleted faster.</description>
+    <descriptionHyperlinks>
+
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Overclock</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>3000</WorkToMake>
+      <MarketValue>45</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>KEP_OverclockHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>KEP_OverclockProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <WakeUp>1</WakeUp>
+      <SmokeleafLeaves>4</SmokeleafLeaves>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>215</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>KEP_OverclockHigh</defName>
+    <label>overclock</label>
+    <description>Mechanites from the drug overclock is overdriving the user's metabolism.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>silent</label>
+        <hungerRateFactor>1.35</hungerRateFactor>
+        <restFallFactor>1.35</restFallFactor>
+      </li>
+      <li>
+        <label>active</label>
+        <minSeverity>0.4</minSeverity>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <restFallFactor>1.5</restFallFactor>
+          <capMods>
+            <li>
+              <capacity>Consciousness</capacity>
+              <offset>0.1</offset>
+            </li>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.25</offset>
+            </li>
+            <li>
+              <capacity>Manipulation</capacity>
+              <offset>0.25</offset>
+            </li>
+          </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

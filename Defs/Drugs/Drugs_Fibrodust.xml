@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>KEP_Fibrodust</defName>
+    <label>fibrodust</label>
+    <description>Military drug that stops bleeding on spot. Its effect is only long enough to carry the user to safety. Potentially cause serious circulatory problems.</description>
+    <descriptionHyperlinks>
+
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Fibrodust</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>2500</WorkToMake>
+      <MarketValue>28</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>KEP_FibrodustHigh</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>KEP_FibrodustProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <KEP_PoisonIvyLeaves>6</KEP_PoisonIvyLeaves>
+      <Neutroamine>1</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>999</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>KEP_FibrodustHigh</defName>
+    <label>fibrodust</label>
+    <description>Bleeding is temporarily stopped due to fibrodust usage.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-12</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <totalBleedFactor>0</totalBleedFactor>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>HeartAttack</hediff>
+            <allowOnLodgers>false</allowOnLodgers>
+            <allowOnQuestRewardPawns>false</allowOnQuestRewardPawns>
+            <mtbDays>0.25</mtbDays>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>
+
+
+
+
+
