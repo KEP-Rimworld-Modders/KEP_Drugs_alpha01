@@ -11,7 +11,7 @@
     </statBases>
     <graphicData>
       <texPath>Things/Plant/PoisonIvyPlant</texPath>
-      <graphicClass>Graphic_Random</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <selectable>true</selectable>
     <pathCost>14</pathCost>
@@ -20,7 +20,7 @@
       <growDays>10.50</growDays>
       <dieIfLeafless>true</dieIfLeafless>
       <harvestTag>Standard</harvestTag>
-      <harvestedThingDef>PsychoidLeaves</harvestedThingDef>
+      <harvestedThingDef>KEP_PoisonIvyLeaves</harvestedThingDef>
       <harvestYield>7</harvestYield>
       <sowMinSkill>8</sowMinSkill>
       <sowTags>
