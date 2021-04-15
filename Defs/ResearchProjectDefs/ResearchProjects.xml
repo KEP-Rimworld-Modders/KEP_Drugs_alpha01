@@ -106,4 +106,18 @@
     <tab>KEP_Drugs</tab>
   </ResearchProjectDef>
 
+  <ResearchProjectDef>
+    <defName>KEP_DermizerProduction</defName>
+    <label>dermizer production</label>
+    <techLevel>Industrial</techLevel>
+    <description>placeholder</description>
+    <baseCost>1000</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
 </Defs>
