@@ -48,7 +48,8 @@ namespace KEP_Drugs
 			if (base.Pawn.health.hediffSet.hediffs.Where((Hediff hd) => hd.IsPermanent()|| hd.def.chronic).TryRandomElement(out Hediff result))
 			{
 				if (Props.excludeChronic == true)
-					return;
+					if (result.def.chronic)
+						return;
 				foreach (BodyPartDef bodyPart in Props.exclusionList)
 					if (result.Part.def == bodyPart)
 						return;
