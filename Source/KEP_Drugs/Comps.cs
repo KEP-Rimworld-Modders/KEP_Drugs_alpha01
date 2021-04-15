@@ -8,22 +8,23 @@ using Verse;
 
 namespace KEP_Drugs
 {
-	public class KEPHediffCompProperties_DermalRegeneration : HediffCompProperties
+	public class KEPHediffCompProperties_SelectiveRegeneration : HediffCompProperties
 	{
 		public List<BodyPartDef> exclusionList = new List<BodyPartDef>();
-		public int timeToHeal;
-		public KEPHediffCompProperties_DermalRegeneration()
+		public int minTimeToHeal;
+		public int maxTimeToHeal;
+		public KEPHediffCompProperties_SelectiveRegeneration()
 		{
-			compClass = typeof(KEPHediffComp_DermalRegeneration);
+			compClass = typeof(KEPHediffComp_SelectiveRegeneration);
 		}
 	}
-	public class KEPHediffComp_DermalRegeneration : HediffComp
+	public class KEPHediffComp_SelectiveRegeneration : HediffComp
 	{
 		private int ticksToHeal;
-		public new KEPHediffCompProperties_DermalRegeneration Props => (KEPHediffCompProperties_DermalRegeneration)props;
+		public new KEPHediffCompProperties_SelectiveRegeneration Props => (KEPHediffCompProperties_SelectiveRegeneration)props;
 		private void ResetTicksToHeal()
 		{
-			ticksToHeal = Rand.Range(15, 30) * Props.timeToHeal;
+			ticksToHeal = Rand.Range(Props.minTimeToHeal, Props.maxTimeToHeal) * 60000;
 		}
 
 		public override void CompPostTick(ref float severityAdjustment)

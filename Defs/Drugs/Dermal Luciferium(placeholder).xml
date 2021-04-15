@@ -54,11 +54,12 @@
     <maxSeverity>1.0</maxSeverity>
     <isBad>false</isBad>
     <comps>
-      <li Class="KEP_Drugs.KEPHediffCompProperties_DermalRegeneration">
+      <li Class="KEP_Drugs.KEPHediffCompProperties_SelectiveRegeneration">
         <exclusionList>
 				<li>Torso</li>
         </exclusionList>
-		<timeToHeal>60000</timeToHeal>
+		<minTimeToHeal>15</minTimeToHeal>
+		<maxTimeToHeal>30</maxTimeToHeal>
       </li>
     </comps>
     <stages>
