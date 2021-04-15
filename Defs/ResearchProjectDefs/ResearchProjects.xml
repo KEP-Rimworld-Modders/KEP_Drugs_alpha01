@@ -107,8 +107,8 @@
   </ResearchProjectDef>
 
   <ResearchProjectDef>
-    <defName>KEP_DermizerProduction</defName>
-    <label>dermizer production</label>
+    <defName>KEP_NeodermProduction</defName>
+    <label>neoderm production</label>
     <techLevel>Industrial</techLevel>
     <description>placeholder</description>
     <baseCost>1000</baseCost>
