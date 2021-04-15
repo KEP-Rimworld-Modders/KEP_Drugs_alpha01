@@ -13,6 +13,7 @@ namespace KEP_Drugs
 		public List<BodyPartDef> exclusionList = new List<BodyPartDef>();
 		public int minTimeToHeal;
 		public int maxTimeToHeal;
+		public bool excludeChronic;
 		public KEPHediffCompProperties_SelectiveRegeneration()
 		{
 			compClass = typeof(KEPHediffComp_SelectiveRegeneration);
@@ -46,6 +47,8 @@ namespace KEP_Drugs
 		{
 			if (base.Pawn.health.hediffSet.hediffs.Where((Hediff hd) => hd.IsPermanent()|| hd.def.chronic).TryRandomElement(out Hediff result))
 			{
+				if (Props.excludeChronic == true)
+					return;
 				foreach (BodyPartDef bodyPart in Props.exclusionList)
 					if (result.Part.def == bodyPart)
 						return;
