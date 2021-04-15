@@ -18,10 +18,16 @@ namespace KEP_Drugs
 			compClass = typeof(KEPHediffComp_SelectiveRegeneration);
 		}
 	}
+
 	public class KEPHediffComp_SelectiveRegeneration : HediffComp
 	{
 		private int ticksToHeal;
-		public new KEPHediffCompProperties_SelectiveRegeneration Props => (KEPHediffCompProperties_SelectiveRegeneration)props;
+		public KEPHediffCompProperties_SelectiveRegeneration Props => (KEPHediffCompProperties_SelectiveRegeneration)props;
+		public override void CompPostMake()
+		{
+			base.CompPostMake();
+			ResetTicksToHeal();
+		}
 		private void ResetTicksToHeal()
 		{
 			ticksToHeal = Rand.Range(Props.minTimeToHeal, Props.maxTimeToHeal) * 60000;
