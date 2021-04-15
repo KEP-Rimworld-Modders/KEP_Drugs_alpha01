@@ -7,7 +7,7 @@
     <description>Homeostatic drug composed of medical mechanites programmed to maintain bodily functions at physiologic level, allowing chronic conditions to be supressed as long as the drug is taken.</description>
     <graphicData>
       <texPath>Things/Item/Drug/Ectostasis</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <rotatable>false</rotatable>
     <statBases>
