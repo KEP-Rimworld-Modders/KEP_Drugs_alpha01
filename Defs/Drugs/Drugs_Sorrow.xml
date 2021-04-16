@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>KEP_Sorrow</defName>
     <label>sorrow</label>
-    <description>A drug that puts the user into a sad mental state. Users would like to spend time alone for a while.\n\nRecommended for those who suffered great losses to prevent more serious mental breaks.</description>
+    <description>A drug that puts the user into a sad mental state. Users would like to spend time alone for a while.\n\ Recommended for those who suffered great losses to prevent more serious mental breaks.</description>
     <descriptionHyperlinks>
 
     </descriptionHyperlinks>

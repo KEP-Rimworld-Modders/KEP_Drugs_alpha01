@@ -4,7 +4,7 @@
   <ThingDef ParentName="MakeableDrugPillBase">
     <defName>KEP_Overclock</defName>
     <label>overclock</label>
-    <description>A drug that overclocks the user's cognitive and manipulative functions, hence the name. Meanwhile, the user is depleted faster.</description>
+    <description>A drug that overclocks the user's metabolism, hence the name. Meanwhile, the user is depleted faster.</description>
     <descriptionHyperlinks>
 
     </descriptionHyperlinks>
