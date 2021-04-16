@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugPillBase">
+    <defName>KEP_Ectostasis</defName>
+    <label>ectostasis</label>
+    <description>Homeostatic drug composed of medical mechanites programmed to maintain bodily functions at physiologic level, allowing chronic conditions to be supressed as long as the drug is taken.</description>
+    <graphicData>
+      <texPath>Things/Item/Drug/Ectostasis</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>9000</WorkToMake>
+      <MarketValue>238</MarketValue>
+      <Mass>0.05</Mass>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>KEP_EctostasisHigh</hediffDef>
+          <severity>1.0</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>KEP_EctostasisProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <ComponentSpacer>1</ComponentSpacer>
+      <Neutroamine>1</Neutroamine>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>910</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>KEP_EctostasisHigh</defName>
+    <label>ectostasis</label>
+    <description>Mechanites from the drug ectostasis are setting the metabolism to basal physiologic level.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.333</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>1</offset>
+            <setMax>1</setMax>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>1</offset>
+            <setMax>1</setMax>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>1</offset>
+            <setMax>1</setMax>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>1</offset>
+            <setMax>1</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

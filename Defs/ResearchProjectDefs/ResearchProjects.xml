@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchTabDef>
+    <defName>KEP_Drugs</defName>
+    <label>KEP Drugs</label>
+  </ResearchTabDef>
+
+<!-- antidepressant production -->
+
+  <ResearchProjectDef>
+    <defName>KEP_AntidepressantProduction</defName>
+    <label>antidepressant production</label>
+    <techLevel>Industrial</techLevel>
+    <description>Discover how to make antidepressants to counteract depression.</description>
+    <baseCost>700</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>KEP_PainkillerProduction</defName>
+    <label>painkiller production</label>
+    <techLevel>Industrial</techLevel>
+    <description>Learn how to make painkiller, useful for pawns who have painful scars.</description>
+    <baseCost>500</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>1</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>KEP_SchyteProduction</defName>
+    <label>schyte production</label>
+    <techLevel>Industrial</techLevel>
+    <description>A powerful drug, that when consumed makes the user's immune system get improved drastically, however it has the sideffect of putting them in to a coma.</description>
+    <baseCost>2000</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>KEP_OverclockProduction</defName>
+    <label>overclock production</label>
+    <techLevel>Spacer</techLevel>
+    <description>Learn how to make overclock, a drug that speeds up metabolisms allowing for faster mouvment and production at the cost of heavy sweating and the time needed for the body recover to afterwards.</description>
+    <baseCost>2500</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>3</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>KEP_EctostasisProduction</defName>
+    <label>ectostasis production</label>
+    <techLevel>Spacer</techLevel>
+    <description>Learn how to make ectostasis, a drug that helps people with heart and lung problems by negating them.</description>
+    <baseCost>1500</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>KEP_SorrowProduction</defName>
+    <label>ectostasis production</label>
+    <techLevel>Spacer</techLevel>
+    <description>Release the inner anger you have. </description>
+    <baseCost>1000</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>5</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>KEP_FibrodustProduction</defName>
+    <label>fibrodust production</label>
+    <techLevel>Industrial</techLevel>
+    <description>placeholder</description>
+    <baseCost>1000</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>6</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>KEP_NeodermProduction</defName>
+    <label>neoderm production</label>
+    <techLevel>Industrial</techLevel>
+    <description>placeholder</description>
+    <baseCost>1000</baseCost>
+    <prerequisites>
+      <li>DrugProduction</li>
+    </prerequisites>
+    <researchViewX>7</researchViewX>
+    <researchViewY>0</researchViewY>
+    <tab>KEP_Drugs</tab>
+  </ResearchProjectDef>
+
+</Defs>
